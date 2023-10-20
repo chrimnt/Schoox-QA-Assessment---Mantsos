@@ -26,13 +26,6 @@ export class CoursePage{
         .eq(3).click()
         cy.get('.dot_completed')
         .should('have.length', 4)
-        // .click({multiple: true})
-        // .each(($ele) => {
-        //     cy.wrap($ele)
-        //     .click()
-        //     .children()
-        //     .should('have.class','dot')
-        // })
     }
 
 

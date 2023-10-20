@@ -16,7 +16,9 @@ describe('template spec', () => {
     loginPage.setEmail('admin@schoox.com')
     loginPage.setPassword(123456)
     loginPage.clickSubmit()
+
     homePage.clickTraining()
+    
     trainingPage.clickCategory()
     cy.get(trainingPage.getCourseTitle()).should(($lis) => {
       expect($lis).to.have.length(4)

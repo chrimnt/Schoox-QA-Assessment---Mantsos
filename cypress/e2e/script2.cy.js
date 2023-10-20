@@ -11,10 +11,13 @@ describe('template spec', () => {
 
 
     it('script2',()=> {
+
         loginPage.setEmail('admin@schoox.com')
         loginPage.setPassword(123456)
         loginPage.clickSubmit()
+
         cy.visit('qatest.schoox.com/6/steps')
+        
         coursePage.clickEnroll()
         coursePage.clickComplete()
         cy.get(coursePage.getProgresstext()).should(($el) => {
